@@ -13,6 +13,43 @@ Status
 ======
 This module is production-ready.
 
+Building as Dynamic Module
+===========================
+1) Clone the repo just outside of the Nginx repo directory
+```
+git clone https://github.com/Danrancan/ngx_cache_purge_dynamic.git
+```
+2) Install build Essentials and Libraries
+```
+sudo apt update && apt-get install build-essential libpcre3-dev libssl-dev zliblg-dev libxml2-dev libxslt1-dev libgd-dev libgeoip-dev 
+```
+3) Get your current configure arguments with `nginx -V`
+4) Navigate to your Nginx build directory and execute:
+```
+sudo ./configure --add-dynamic-module=../ngx_cache_purge_dynamic --with-compat --the-rest-of-your-configure-arguements
+```
+NOTE: Be sure to add the rest of the configure arguments from the output of `nginx -V` to the `./configure` line above.
+5) Make modules
+```
+sudo make modules
+```
+Your newly built module will be in `objs/ngx_http_cache_purge_module.so`
+6) Move it to /etc/nginx/modules/
+```
+sudo mv objs/ngx_http_cache_purge_module.so /etc/nginx/modules/
+```
+7) Enable Nginx Cache Purge Module
+```
+sudo nano /etc/nginx/nginx.conf
+```
+Add the line `load_module modules/ngx_http_cache_purge_module.so;` to the top of your nginx.conf file.
+```
+user www-data www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+load_module modules/ngx_http_cache_purge_module.so;
+```
+ALL DONE!
 
 Configuration directives (same location syntax)
 ===============================================
