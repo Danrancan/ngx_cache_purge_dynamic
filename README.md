@@ -52,6 +52,8 @@ user www-data www-data;
 worker_processes auto;
 pid /run/nginx.pid;
 load_module modules/ngx_http_cache_purge_module.so;
+
+http {
 ```
 ALL DONE!
 
