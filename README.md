@@ -13,9 +13,9 @@ Status
 ======
 This module is production-ready.
 
-Building as Dynamic Module
+Building as Dynamic Module on Ubuntu 20.04
 ===========================
-1) Clone the repo just outside of the Nginx repo directory
+1) Clone this repository just outside of the Nginx repo directory
 ```
 git clone https://github.com/Danrancan/ngx_cache_purge_dynamic.git
 ```
