@@ -55,6 +55,10 @@ load_module modules/ngx_http_cache_purge_module.so;
 
 http {
 ```
+
+9) Restart nginx
+`sudo service nginx restart`
+
 ALL DONE!
 
 Configuration directives (same location syntax)
