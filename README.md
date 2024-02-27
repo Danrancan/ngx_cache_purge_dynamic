@@ -21,7 +21,7 @@ git clone https://github.com/Danrancan/ngx_cache_purge_dynamic.git
 ```
 2) Install build Essentials and Libraries
 ```
-sudo apt update && sudo apt-get install build-essential libpcre3-dev libssl-dev zliblg-dev libxml2-dev libxslt1-dev libgd-dev libgeoip-dev 
+sudo apt update && sudo apt-get install build-essential libpcre3-dev libssl-dev zlib1g-dev libxml2-dev libxslt1-dev libgd-dev libgeoip-dev 
 ```
 3) Get your current configure arguments with `nginx -V`
 4) Navigate to your Nginx build directory and execute:
