@@ -116,7 +116,7 @@ static ngx_command_t  ngx_http_cache_purge_module_commands[] = {
 
 # if (NGX_HTTP_FASTCGI)
     { ngx_string("fastcgi_cache_purge"),
-      NGX_HTTP_MAIN_CONF|NGX_HTTP_SRV_CONF|NGX_HTTP_LOC_CONF|NGX_CONF_1MORE,
+      NGX_HTTP_MAIN_CONF|NGX_HTTP_SRV_CONF|NGX_HTTP_LOC_CONF|NGX_HTTP_SIF_CONF|NGX_HTTP_LIF_CONF|NGX_CONF_1MORE,
       ngx_http_fastcgi_cache_purge_conf,
       NGX_HTTP_LOC_CONF_OFFSET,
       0,
@@ -125,7 +125,7 @@ static ngx_command_t  ngx_http_cache_purge_module_commands[] = {
 
 # if (NGX_HTTP_PROXY)
     { ngx_string("proxy_cache_purge"),
-      NGX_HTTP_MAIN_CONF|NGX_HTTP_SRV_CONF|NGX_HTTP_LOC_CONF|NGX_CONF_1MORE,
+      NGX_HTTP_MAIN_CONF|NGX_HTTP_SRV_CONF|NGX_HTTP_LOC_CONF|NGX_HTTP_SIF_CONF|NGX_HTTP_LIF_CONF|NGX_CONF_1MORE,
       ngx_http_proxy_cache_purge_conf,
       NGX_HTTP_LOC_CONF_OFFSET,
       0,
@@ -134,7 +134,7 @@ static ngx_command_t  ngx_http_cache_purge_module_commands[] = {
 
 # if (NGX_HTTP_SCGI)
     { ngx_string("scgi_cache_purge"),
-      NGX_HTTP_MAIN_CONF|NGX_HTTP_SRV_CONF|NGX_HTTP_LOC_CONF|NGX_CONF_1MORE,
+      NGX_HTTP_MAIN_CONF|NGX_HTTP_SRV_CONF|NGX_HTTP_LOC_CONF|NGX_HTTP_SIF_CONF|NGX_HTTP_LIF_CONF|NGX_CONF_1MORE,
       ngx_http_scgi_cache_purge_conf,
       NGX_HTTP_LOC_CONF_OFFSET,
       0,
@@ -143,7 +143,7 @@ static ngx_command_t  ngx_http_cache_purge_module_commands[] = {
 
 # if (NGX_HTTP_UWSGI)
     { ngx_string("uwsgi_cache_purge"),
-      NGX_HTTP_MAIN_CONF|NGX_HTTP_SRV_CONF|NGX_HTTP_LOC_CONF|NGX_CONF_1MORE,
+      NGX_HTTP_MAIN_CONF|NGX_HTTP_SRV_CONF|NGX_HTTP_LOC_CONF|NGX_HTTP_SIF_CONF|NGX_HTTP_LIF_CONF|NGX_CONF_1MORE,
       ngx_http_uwsgi_cache_purge_conf,
       NGX_HTTP_LOC_CONF_OFFSET,
       0,
